@@ -17,5 +17,46 @@ from prime import generate_p_and_q
 
 
 def get_p_and_q(n):
+    """ Secretely choose two distinct prime numbers. 
+
+    Args:
+        n (int): Max limit of prime range to choose from.
+
+    Returns:
+        tuple: The two distinct prime integer values.
+    """
     p, q = generate_p_and_q(n)
     return p, q
+
+
+def calculate_n(p, q):
+    """ Calculate the value of n.
+
+    Args:
+        p (int): Distinct prime integer.
+        q (int): Distinct prime integer.
+
+    Returns:
+        int: [description]
+    """
+    n =  p * q
+    return n
+
+
+def calculate_phi(p, q):
+    """ Calculate Euler's phi function.
+
+    Args:
+        p (int): Distinct prime integer.
+        q (int): Distinct prime integer.
+
+    Returns:
+        int: Euler's phi function.
+    """
+    phi = (p - 1) * (q - 1)
+    return phi
+
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()

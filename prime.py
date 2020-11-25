@@ -128,6 +128,9 @@ def generate_p_and_q(size):
 
     Returns:
         int: Two prime values p and q used for the RSA crpytosystem.
+
+    Note:
+        Need to make sure p and q are distinct.
     """
     if size < 200:
         p = generate_small_prime(size)
