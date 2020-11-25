@@ -57,6 +57,19 @@ def calculate_phi(p, q):
     return phi
 
 
+def calculate_invertible_element(n):
+    """ Calculates an invertible element whithin the natural set of phi.
+
+    Args:
+        n (int): Max limit of prime range to choose from.
+
+    Returns:
+        int: Invertible element 
+    """
+    e = 0
+    return e
+
+
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
