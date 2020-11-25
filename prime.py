@@ -45,26 +45,48 @@ def is_prime(n):
         i += 6
     return True
 
-def sieve_of_eratosthenes():
+def sieve_of_eratosthenes(n):
     """ Algorithm to compute a list of prime numbers.
+
+    >>> sieve_of_eratosthenes(10)
+    [2, 3, 5, 7]
+    >>> sieve_of_eratosthenes(20)
+    [2, 3, 5, 7, 11, 13, 17, 19]
 
     Returns:
         list: A list containing prime numbers.
     """
-    return n
+    prime = [True for i in range(n + 1)]
+    p = 2
+    while (p * p <= n):
+        if prime[p] == True:
+            for i in range(p * p, n + 1, p):
+                prime[i] = False
+        p += 1
+    primes = []
+    for p in range(2, n + 1):
+        if prime[p]:
+            primes.append(p)
+    return primes
 
-def generate_small_prime():
+
+def generate_small_prime(size):
     """ Chooses a random prime generated from the Sieve of Eratosthenes.
+    Args:
+        size (int): The max limit for prime generation.
 
     Returns:
         int: A prime number.
     """
-    primes = sieve_of_eratosthenes()
+    primes = sieve_of_eratosthenes(size)
     return random.choice(primes)
 
 
-def generate_big_prime():
+def generate_big_prime(size):
     """[summary]
+
+    Args:
+        size (int): The max limit for prime generation.
 
     Returns:
         [type]: [description]
@@ -78,17 +100,17 @@ def get_p_and_q(size):
     """ Gets the values of p and q determined by the size of the prime wanted.
 
     Args:
-        size (int): 0 for small prime and 1 for big prime.
+        size (int): The range in which the primes can be generated within.
 
     Returns:
         int: Two prime values p and q used for the RSA crpytosystem.
     """
-    if size == 0:
-        p = generate_small_prime()
-        q = generate_small_prime()
+    if size < 200:
+        p = generate_small_prime(size)
+        q = generate_small_prime(size)
     else:
-        p = generate_big_prime()
-        q = generate_big_prime()
+        p = generate_big_prime(size)
+        q = generate_big_prime(size)
     return p, q
 
 
