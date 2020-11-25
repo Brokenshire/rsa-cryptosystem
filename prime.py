@@ -45,14 +45,30 @@ def is_prime(n):
         i += 6
     return True
 
+def sieve_of_eratosthenes():
+    """ Algorithm to compute a list of prime numbers.
+
+    Returns:
+        list: A list containing prime numbers.
+    """
+    return n
 
 def generate_small_prime():
-    n = 0
-    if is_prime(n):
-        return n
+    """ Chooses a random prime generated from the Sieve of Eratosthenes.
+
+    Returns:
+        int: A prime number.
+    """
+    primes = sieve_of_eratosthenes()
+    return random.choice(primes)
 
 
 def generate_big_prime():
+    """[summary]
+
+    Returns:
+        [type]: [description]
+    """
     n = 0
     if is_prime(n):
         return n
