@@ -13,5 +13,15 @@
 # limitations under the License.
 
 
-def encrpt():
-    
+def encrpt(m, e, n):
+    """[summary]
+
+    Args:
+        m ([type]): [description]
+        e ([type]): [description]
+        n ([type]): [description]
+
+    Returns:
+        (): []
+    """
+    return
