@@ -101,9 +101,9 @@ def generate_big_prime(size):
     Returns:
         [type]: [description]
     """
+    # not built yet...
     n = 0
-    if is_prime(n):
-        return n
+    return n
     
 
 def get_p_and_q(size):
