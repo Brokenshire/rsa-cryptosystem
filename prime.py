@@ -19,6 +19,8 @@ import random
 def is_prime(n):
     """ Fermat primality test.
 
+    >>> is_prime(0)
+    False
     >>> is_prime(2)
     True
     >>> is_prime(5)
@@ -28,6 +30,9 @@ def is_prime(n):
 
     Args:
         n (int): Value to be tested for primality.
+
+    Returns:
+        boolean: True if n is a prime number, otherwise, False.
     """
     if n <= 3:
         return n > 1
@@ -60,7 +65,7 @@ def get_p_and_q(size):
         size (int): 0 for small prime and 1 for big prime.
 
     Returns:
-        int: The values for p and q using for RSA.
+        int: Two prime values p and q used for the RSA crpytosystem.
     """
     if size == 0:
         p = generate_small_prime()
