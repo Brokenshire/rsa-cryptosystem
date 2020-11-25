@@ -45,6 +45,7 @@ def is_prime(n):
         i += 6
     return True
 
+
 def sieve_of_eratosthenes(n):
     """ Algorithm to compute a list of prime numbers.
 
@@ -72,6 +73,7 @@ def sieve_of_eratosthenes(n):
 
 def generate_small_prime(size):
     """ Chooses a random prime generated from the Sieve of Eratosthenes.
+    
     Args:
         size (int): The max limit for prime generation.
 
@@ -98,6 +100,20 @@ def generate_big_prime(size):
 
 def get_p_and_q(size):
     """ Gets the values of p and q determined by the size of the prime wanted.
+
+    >>> p, q = get_p_and_q(100)
+    >>> is_prime(p - 1)
+    False
+    >>> is_prime(q - 1)
+    False
+    >>> is_prime(p)
+    True
+    >>> is_prime(q)
+    True
+    >>> is_prime(p + 1)
+    False
+    >>> is_prime(q + 1)
+    False
 
     Args:
         size (int): The range in which the primes can be generated within.
