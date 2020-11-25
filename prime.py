@@ -74,6 +74,14 @@ def sieve_of_eratosthenes(n):
 def generate_small_prime(size):
     """ Chooses a random prime generated from the Sieve of Eratosthenes.
     
+    >>> n = generate_small_prime(10)
+    >>> is_prime(n - 1)
+    False
+    >>> is_prime(n)
+    True
+    >>> is_prime(n + 1)
+    False
+
     Args:
         size (int): The max limit for prime generation.
 
