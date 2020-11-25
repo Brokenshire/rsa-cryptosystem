@@ -12,12 +12,35 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-class RSA():
+# Local imports
+import sys
 
-    def __init__(self):
+# Third-party imports
+from PyQt5.QtCore import Qt
+from PyQt5.QtGui import QIcon
+from PyQt5.QtWidgets import QApplication, QListWidget, QMainWindow, QLabel, QPushButton, QLineEdit
+
+
+class RSA(QMainWindow):
+
+    def __init__(self, *args, **kwargs):
+        super(RSA, self).__init__(*args, **kwargs)
+        self.build_interface()
     
+    
+    def build_interface(self):
+        self.entry_lineedit = QLineEdit(self)
+        self.entry_lineedit.move(30, 150)
+        self.entry_lineedit.resize(120, 30)
+
 
 def main():
+    app = QApplication(sys.argv)
+    window = RSA()
+    window.setWindowTitle("RSA Cryptosystem")
+    window.setGeometry(300, 300, 350, 400)
+    window.show()
+    sys.exit(app.exec_())
 
 
 if __name__ == "__main__":
