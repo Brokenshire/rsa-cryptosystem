@@ -11,3 +11,32 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+# Third-party import(s)
+import random
+
+
+class Prime():
+
+    def __init__(self, p, q):
+        self.p = p
+        self.q = q
+
+
+    def is_prime(self):
+
+
+    def generate_small_prime(self):
+
+
+    def generate_big_prime(self):
+
+
+    def get_p_and_q(self):
+
+
+def main():
+
+
+if __name__ == "__main__":
+    main()
