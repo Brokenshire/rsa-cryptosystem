@@ -11,3 +11,11 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+# Local imports
+from prime import generate_p_and_q
+
+
+def get_p_and_q(n):
+    p, q = generate_p_and_q(n)
+    return p, q

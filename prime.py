@@ -106,7 +106,7 @@ def generate_big_prime(size):
     return n
     
 
-def get_p_and_q(size):
+def generate_p_and_q(size):
     """ Gets the values of p and q determined by the size of the prime wanted.
 
     >>> p, q = get_p_and_q(100)
